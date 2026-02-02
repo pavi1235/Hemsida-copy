@@ -1,0 +1,58 @@
+body {
+       
+
+        /**/
+            font-family: 'Times New Roman', Times, serif;
+          
+            
+            width: 500px;
+           
+            margin: 100px 200px 3px;
+    
+            background-color: rgb(0, 245, 212);
+
+            span {
+            /**/
+
+                color: rgb(241, 235, 235) ;
+            }
+
+           
+           
+        }
+        .bild{
+            width:500px;
+            height:500px;
+        }
+
+    nav a{
+      display: flex;
+      text-align: center;
+      justify-content:center ;
+     align-items: center;
+       font-family: 'Times New Roman', Times, serif;
+          
+  
+            color: rgb(238, 20, 20);
+
+    text-decoration: none;
+           
+
+
+        }
+        .hero{
+	height: 500px; 
+background-image: url(file:///h%3A/webb/Bilder/IMG_3248.JPG);
+	display: flex;
+	text-align: center;
+	background-position: center;
+    background-size: cover;
+}
+#special_h2{
+	color: rgb(255, 255, 255);
+	
+}
+.Normal_h2{
+	color: rgba(233, 0, 0, 0.836);
+     font-family: "Bebas Neue", sans-serif;
+}
