@@ -10,6 +10,7 @@
      
 
     <title> Välkomen  till VHDeS </title>
+       <link rel="stylesheet" href="style.css">
     <style>
   
         
@@ -22,9 +23,32 @@
         <h1 id="Välkomen">Välkommen!</h1>
         <div class="Hyr-Section">
             <button id="hyrButton">Hyra elscooter</button>
-            <p id="Status">Ingen elscooter hyrd.</p>
+            <p id="Status" class="intehyrd">Ingen elscooter hyrd.</p>
             <div id="Historia"></div>
              </div>
+
+
+
+             <script>
+    const hyrButton = document.getElementById("hyrButton");
+    const statusText = document.getElementById("Status");
+
+    let hyrd = false;
+
+    hyrButton.onclick = function () {
+        if (!hyrd) {
+            statusText.textContent = "Elscooter är hyrd.";
+            statusText.className = "hyrd";
+            hyrButton.textContent = "Lämna tillbaka elscooter";
+            hyrd = true;
+        } else {
+            statusText.textContent = "Ingen elscooter hyrd.";
+            statusText.className = "inte hyrd ";
+            hyrButton.textContent = "Hyra elscooter";
+            hyrd = false;
+        }
+    };
+</script>
   
 </body>
 
