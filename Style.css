@@ -1,24 +1,78 @@
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #e3edf7);
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-container {
-    width: 400px;
-    margin: 50px auto;
+    background-color: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     text-align: center;
-    font-family: Arial, sans-serif;
+}
+#Välkomen {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.Hyr-Section {
+    margin-top: 20px;
+}
+
+#Status {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600px;
+    transition: all 0.3s ease;
+}
+
+.hyrd {
+    background-color: #fdecea;
+    color: #c62828;
+    border: 1px solid #f5c6cb;
 }
 
 
 .intehyrd {
-    background-color: lightgreen; 
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
 }
 
 
-.hyrd {
-    background-color: rgb(245, 0, 0); 
-    padding: 15px;
-    margin-top: 15px;
+#hyrButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1976d2;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+#hyrButton:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+#Historia {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #444;
+}
+
+#Historia p {
+    background-color: #f1f8e9;
+    padding: 8px;
     border-radius: 8px;
-    font-weight: bold;
+    margin-bottom: 6px;
 }

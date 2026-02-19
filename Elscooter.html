@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-
-
 <html lang="sv">
-
 <head>
-    <meta charset="utf-8" />
-   
-
-     
-
-    <title> Välkomen  till VHDeS </title>
-       <link rel="stylesheet" href="style.css">
-    <style>
-  
-        
-    </style>
-
+    <meta charset="utf-8">
+    <title>Profil - VHDeS</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
-
 <body>
-  <div class="profile-container">
-        <h1 id="Välkomen">Välkommen!</h1>
+  
+
+    <div class="profile-container">
+        <h1 id="Välkomen">vart saka du resa </h1>
+
         <div class="Hyr-Section">
             <button id="hyrButton">Hyra elscooter</button>
             <p id="Status" class="intehyrd">Ingen elscooter hyrd.</p>
             <div id="Historia"></div>
-             </div>
+        </div>
+    </div>
 
+    <script>
+       
+        const hyrButton = document.getElementById("hyrButton");
+        const statusText = document.getElementById("Status");
+        const historiaDiv = document.getElementById("Historia");
 
+        let hyrd = false;
+        let startTid = null;
 
-             <script>
-    const hyrButton = document.getElementById("hyrButton");
-    const statusText = document.getElementById("Status");
+        hyrButton.onclick = function () {
+            if (!hyrd) {
+              
+                startTid = new Date();
 
-    let hyrd = false;
+                statusText.textContent =
+                    "Elscooter hyrd sedan " + startTid.toLocaleTimeString();
+                statusText.className = "hyrd";
 
-    hyrButton.onclick = function () {
-        if (!hyrd) {
-            statusText.textContent = "Elscooter är hyrd.";
-            statusText.className = "hyrd";
-            hyrButton.textContent = "Lämna tillbaka elscooter";
-            hyrd = true;
-        } else {
-            statusText.textContent = "Ingen elscooter hyrd.";
-            statusText.className = "inte hyrd ";
-            hyrButton.textContent = "Hyra elscooter";
-            hyrd = false;
-        }
-    };
-</script>
-  
+                hyrButton.textContent = "Lämna tillbaka elscooter";
+                hyrd = true;
+            } else {
+                
+                const slutTid = new Date();
+                const minuter = Math.floor((slutTid - startTid) / 60000);
+
+                statusText.textContent = "Ingen elscooter hyrd.";
+                statusText.className = "intehyrd";
+
+                historiaDiv.innerHTML += `
+                    <p>  Hyrd kl ${startTid.toLocaleTimeString()} i ${minuter} minuter</p>
+                `;
+
+                hyrButton.textContent = "Hyra elscooter";
+                hyrd = false;
+            }
+        };
+    </script>
 </body>
-
-
-   
-</html>                                    
+</html>
